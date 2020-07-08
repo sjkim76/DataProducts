@@ -1,0 +1,39 @@
+---
+title: "UserManual For FAANG Stock Chart and Return Graph"
+author: "Songju Kim"
+date: '2020 7 8 '
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## FAANG Stock Chart and Return Graph
+
+How to use this app is intuitive.
+
+In the beginning, right plot side has nothing.
+
+1.You choose one stock symbol in the first Select
+2.You choose time interval which you'd like to look up
+3.You choose return type
+4.Click Get Chart Button
+
+## Outputs
+
+First stock chart shows time series of stock price\
+Which satisfies your inputs(symbol,interval)
+
+Second char shows time series of different return type\
+
+
+## Additional functions.
+
+After loading your chart in the first plot,\
+You can add technological analysis which are provided by chartSeries functions.\
+
+- Volume
+- Simple Moving Average
+- Weighted Moving Average
+- Bollinger Bands

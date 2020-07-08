@@ -1,0 +1,12 @@
+name: courseproj
+title: courseproj
+username:
+account: songju
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 2548384
+bundleId: 3367034
+url: https://songju.shinyapps.io/courseproj/
+when: 1594212206.83037
+asMultiple: FALSE
+asStatic: FALSE

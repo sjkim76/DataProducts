@@ -1,0 +1,72 @@
+---
+title: "FAANG Stock and Return Graph"
+author: "Songju Kim"
+date: '2020 7 8 '
+output: slidy_presentation
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Introduction of Project
+
+FAANG (Facebook, Amazon, Apple, Neflix, Google) Stocks are so popular nowadays.
+
+These IT giants' stock surged up for a long time.
+
+This Shiny Web app shows these stocks' performance and additional technological analysis.
+
+
+```{r, echo=FALSE}
+# Define variable containing url
+url <- "https://specials-images.forbesimg.com/imageserve/5da63b70db40260006202a39/960x0.jpg?fit=scale"
+```
+
+<center><img src="`r url`"> </center>
+
+## Quantmod packages
+
+To deal with financial data, you need to install quantmod packages.
+
+```{r echo=TRUE}
+library(quantmod)
+```
+
+These are frequently used functions of quantmod
+
+- getSymbols()
+- chartSeries()
+- dailyReturn(),weeklyReturn(),monthlyReturn()...etc
+
+## Layout of Shiny Web UI
+
+Inputs
+
+- selectInput    : contains FAANG stock symbol code
+- dateRangeInput : represents date interval to get Symbols
+- selectInput    : containts Return type for showing another chars
+- actionButton   : request
+- selectInput    : choices for chart type
+- checkInputs and action button for technical analysis 
+
+Outputs
+
+- Basic chart( date, price)
+- Return chart( time series, return)
+
+## Reactive elements
+
+- dataInput, dateInput\
+  Select one stock symbol or change interval, \
+  Output reflects these changes with actionButton Click
+  
+- taOptions\
+  It draws added options.\
+  
+- returns\
+  It transforms symbol prices into return rate based on \
+  selected time interval
+    
+**With reactive elements, inputs are conneted to outputs dynamically.**
